@@ -11,7 +11,7 @@ $Action = {
 	$DestDir = $event.MessageData.DestDir
 	$TempDir = $event.MessageData.TempDir
 
-	$message = "Plot {0} is ready, moving to {1}" -f $details.FullPath, $DestDir
+	$message = "Moving {0} to {1}" -f $details.FullPath, $DestDir
 	Write-Host $message -ForegroundColor Yellow -NoNewline
 	Move-Item -Path $details.FullPath -Destination $DestDir
 	Write-Host "  Done" -ForegroundColor Green
